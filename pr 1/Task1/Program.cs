@@ -1,21 +1,105 @@
-﻿Console.WriteLine("Введите 1 число:");
-string? num1 = Console.ReadLine();
-Console.WriteLine("Введите операцию:");
+﻿/* using System.Reflection;
+Console.WriteLine("Введите выражение (каждый символ с новой строки):");
+double num1 = Convert.ToDouble(Console.ReadLine());
+double result = num1;
+
+double memory = 0;
+bool memoryFlag = false;
+
 string? operation = Console.ReadLine();
-Console.WriteLine("Введите 2 число:");
-string? num2 = Console.ReadLine();
-Console.WriteLine("Ответ:");
-
-Convert.ToDouble(num1);
-Convert.ToDouble(num2);
-
-switch (operation)
+while (operation != "=")
 {
-    case "+":
-        Console.WriteLine(num1 + num2);
-        break;
+    string? input = Console.ReadLine();
+    double inputNum = 0;
+    if (input != "MR")
+    {
+        inputNum = Convert.ToDouble(input);
+    }
+    else if (input == "MR" && memoryFlag == false)
+    {
+        Console.WriteLine("В памяти ничего нет");
+        while (input == "MR")
+        {
+            input = Console.ReadLine();
+        }
+    }
+    else
+    {
+        inputNum = memory;
+    }
 
-    default:
-        Console.WriteLine("Некорректный ввод");
-        break;
+    switch (operation)
+    {
+        case "+":
+            result = result + inputNum;
+            Console.WriteLine($"Ответ: {result}");
+            operation = Console.ReadLine();
+            break;
+        case "-":
+            result = result - inputNum;
+            Console.WriteLine($"Ответ: {result}");
+            operation = Console.ReadLine();
+            break;
+        case "*":
+            result = result * inputNum;
+            Console.WriteLine($"Ответ: {result}");
+            operation = Console.ReadLine();
+            break;
+        case "/":
+            result = result / inputNum;
+            Console.WriteLine($"Ответ: {result}");
+            operation = Console.ReadLine();
+            break;
+        case "%":
+            result = result * (inputNum / 100);
+            Console.WriteLine($"Ответ: {result}");
+            operation = Console.ReadLine();
+            break;
+        case "1/x":
+            result = 1 / result;
+            Console.WriteLine($"Ответ: {result}");
+            operation = Console.ReadLine();
+            break;
+        case "x^2":
+            result = result * result;
+            Console.WriteLine($"Ответ: {result}");
+            operation = Console.ReadLine();
+            break;
+        case "sqrt":
+            result = Math.Sqrt(result);
+            Console.WriteLine($"Ответ: {result}");
+            operation = Console.ReadLine();
+            break;
+        case "M+":
+            if (memoryFlag == false)
+            {
+                memory = result;
+                memoryFlag = true;
+            }
+            else
+            {
+                result = result + memory;
+            }
+            operation = Console.ReadLine();
+            break;
+        case "M-":
+            if (memoryFlag == false)
+            {
+                memory = result;
+                memoryFlag = true;
+            }
+            else
+            {
+                result = memory - result;
+            }
+            operation = Console.ReadLine();
+            break;
+
+        default:
+            Console.WriteLine("Некорректный ввод");
+            operation = "=";
+            break;
+    }
 }
+
+ */
