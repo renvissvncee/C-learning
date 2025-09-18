@@ -1,8 +1,9 @@
 Stack<object> stack = new Stack<object>();
 
+Console.Write("Введите число: ");
 string? input = Console.ReadLine();
 
-bool numFlag = true;
+bool numFlag = true; // Флаг на проверку, что ждет калькулятор: число или операцию
 
 double result = Convert.ToDouble(input);
 
@@ -20,33 +21,16 @@ static void PrintStack<T>(Stack<T> stack)
     }
 }
 
-// "Начальная стадия"
-while (numFlag)
-{
-    try
-    {
-        stack.Push(Convert.ToDouble(input));
-        numFlag = false;
-    }
-    catch
-    {
-        Console.WriteLine("Введите число!");
-        input = Console.ReadLine();
-    }
-}
-input = Console.ReadLine();
-
-// Продолжение
+// Продолжение (основная часть)
 while (input != "=")
 {
-    if (stack.Count() == 3)
+    if (stack.Count == 3)
     {
         double num1, num2;
         string? operation;
         num2 = Convert.ToDouble(stack.Pop());
         operation = Convert.ToString(stack.Pop());
         num1 = Convert.ToDouble(stack.Pop());
-
         switch (operation)
         {
             case "+":
@@ -59,7 +43,15 @@ while (input != "=")
                 result = num1 * num2;
                 break;
             case "/":
-                result = num1 / num2;
+                // Проверка деления на ноль
+                if (num2 != 0)
+                {
+                    result = num1 / num2;
+                }
+                else
+                {
+                    Console.WriteLine("Делить на ноль нельзя!");
+                }
                 break;
             case "%":
                 result = num1 * (num2 / 100);
@@ -69,10 +61,22 @@ while (input != "=")
                 Console.WriteLine("Что то не так");
                 break;
         }
-        stack.Push(result);
-        Console.WriteLine($"Ответ: {result}");
-        numFlag = false;
-        input = Console.ReadLine();
+        if (!double.IsInfinity(result))
+        {
+            stack.Push(result);
+            Console.WriteLine($"Ответ: {result}");
+            numFlag = false;
+            Console.Write("Введите операцию: ");
+            input = Console.ReadLine();
+        }
+        else
+        {
+            Console.WriteLine("Слишком большое число. Начните сначала");
+            Console.Write("Введите число: ");
+            numFlag = true;
+            stack.Clear();
+            input = Console.ReadLine();
+        }
     }
 
     // Калькулятор ждет число
@@ -90,6 +94,12 @@ while (input != "=")
                 stack.Push(Convert.ToDouble(input)); // конвертируем в double для проверки
                 // что пользователь действительно ввел число
                 numFlag = false;
+
+                if (!(stack.Count == 3))
+                { 
+                    Console.Write("Введите операцию: ");
+                    input = Console.ReadLine();
+                }
             }
             catch
             {
@@ -108,10 +118,17 @@ while (input != "=")
         }
         else if (input == "1/x")
         {
-            result = 1 / Convert.ToDouble(stack.Pop());
-            stack.Push(result);
-            Console.WriteLine($"Ответ: {result}");
-            numFlag = false;
+            // проверка деления на ноль
+            if (result != 0)
+            {
+                result = 1 / Convert.ToDouble(stack.Pop());
+                stack.Push(result);
+                Console.WriteLine($"Ответ: {result}");
+            }
+            else
+            {
+                Console.WriteLine("Делить на ноль нельзя!");
+            }
         }
         else if (input == "x^2")
         {
@@ -119,14 +136,12 @@ while (input != "=")
             result = tempNum * tempNum;
             stack.Push(result);
             Console.WriteLine($"Ответ: {result}");
-            numFlag = false;
         }
         else if (input == "sqrt")
         {
             result = Math.Sqrt(Convert.ToDouble(stack.Pop()));
             stack.Push(result);
             Console.WriteLine($"Ответ: {result}");
-            numFlag = false;
         }
         else if (input == "M+")
         {
@@ -140,8 +155,16 @@ while (input != "=")
         {
             Console.WriteLine("Неверный ввод!");
         }
-        //Console.WriteLine("Поседний ");Console.WriteLine(Convert.ToString(stack.Peek()));
-        input = Console.ReadLine();
+
+        if (numFlag)
+        {
+            Console.Write("Введите число: ");
+            input = Console.ReadLine();
+        }
+        else
+        {
+            Console.Write("Введите операцию: ");
+            input = Console.ReadLine();
+        }
     }
-    //PrintStack(stack);
 } 

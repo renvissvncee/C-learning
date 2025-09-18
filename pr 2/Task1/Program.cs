@@ -1,5 +1,5 @@
 ﻿Console.Write("Введите 'x': ");
-double x = x = Convert.ToDouble(Console.ReadLine());
+double x = Convert.ToDouble(Console.ReadLine());
 bool xIsGood = false;
 while (!xIsGood)
 {
@@ -29,40 +29,17 @@ int double_fact(int x) {
     return res;
  }
 
-double pow(double x, int s)
-{
-    double res = x;
-    if (s == 0)
-        return 1;
-    for (int i = 1; i < s; i++)
-        {
-            res = res * x;
-        }
-    return res;
-}
-
 
 double result = 0;
 double term = 0;
 Console.Write("Значение функции: ");
 for (int i = 0; i < n; i++)
 {
-    term = pow(-1, i) * (double_fact(2 * i - 1) * pow(x, 2 * i + 1)) / (double_fact(2 * i) * (2 * i + 1));
-    if (Math.Abs(term) >= e)
-        result += term;
+    term = Math.Pow(-1, i) * (double_fact(2 * i - 1) * Math.Pow(x, 2 * i + 1)) / (double_fact(2 * i) * (2 * i + 1));
+    if (Math.Abs(term) < e)
+        break;
+    result += term;
+    
 }
 
-// Узнаем сколько знаков после запятой нужно
-int precision = 0;
-string e_ch = Convert.ToString(e);
-e_ch = e_ch.Substring(2, e_ch.Length - 2);
-int j = 0;
-char c = e_ch[j];
-while (c != '1')
-{
-    precision += 1;
-    j++;
-    c = e_ch[j];
-}
-
-Console.Write(Convert.ToString(result).Substring(0,));
+Console.WriteLine(result);
