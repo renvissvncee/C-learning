@@ -1,0 +1,15 @@
+D:\study\2 курс\1 семестр\CS\сам\List,Dict,Hash\Dict\Task1\bin\Debug\net9.0\Task1.exe
+D:\study\2 курс\1 семестр\CS\сам\List,Dict,Hash\Dict\Task1\bin\Debug\net9.0\Task1.deps.json
+D:\study\2 курс\1 семестр\CS\сам\List,Dict,Hash\Dict\Task1\bin\Debug\net9.0\Task1.runtimeconfig.json
+D:\study\2 курс\1 семестр\CS\сам\List,Dict,Hash\Dict\Task1\bin\Debug\net9.0\Task1.dll
+D:\study\2 курс\1 семестр\CS\сам\List,Dict,Hash\Dict\Task1\bin\Debug\net9.0\Task1.pdb
+D:\study\2 курс\1 семестр\CS\сам\List,Dict,Hash\Dict\Task1\obj\Debug\net9.0\Task1.GeneratedMSBuildEditorConfig.editorconfig
+D:\study\2 курс\1 семестр\CS\сам\List,Dict,Hash\Dict\Task1\obj\Debug\net9.0\Task1.AssemblyInfoInputs.cache
+D:\study\2 курс\1 семестр\CS\сам\List,Dict,Hash\Dict\Task1\obj\Debug\net9.0\Task1.AssemblyInfo.cs
+D:\study\2 курс\1 семестр\CS\сам\List,Dict,Hash\Dict\Task1\obj\Debug\net9.0\Task1.csproj.CoreCompileInputs.cache
+D:\study\2 курс\1 семестр\CS\сам\List,Dict,Hash\Dict\Task1\obj\Debug\net9.0\Task1.sourcelink.json
+D:\study\2 курс\1 семестр\CS\сам\List,Dict,Hash\Dict\Task1\obj\Debug\net9.0\Task1.dll
+D:\study\2 курс\1 семестр\CS\сам\List,Dict,Hash\Dict\Task1\obj\Debug\net9.0\refint\Task1.dll
+D:\study\2 курс\1 семестр\CS\сам\List,Dict,Hash\Dict\Task1\obj\Debug\net9.0\Task1.pdb
+D:\study\2 курс\1 семестр\CS\сам\List,Dict,Hash\Dict\Task1\obj\Debug\net9.0\Task1.genruntimeconfig.cache
+D:\study\2 курс\1 семестр\CS\сам\List,Dict,Hash\Dict\Task1\obj\Debug\net9.0\ref\Task1.dll
