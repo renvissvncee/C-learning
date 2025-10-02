@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\study\\2 курс\\1 семестр\\CS\\pr 2\\Task1\\Task1.csproj": {}
+    "D:\\study\\2 курс\\1 семестр\\CS\\pr 2\\pr 2.2\\Task1\\Task1.csproj": {}
   },
   "projects": {
-    "D:\\study\\2 курс\\1 семестр\\CS\\pr 2\\Task1\\Task1.csproj": {
+    "D:\\study\\2 курс\\1 семестр\\CS\\pr 2\\pr 2.2\\Task1\\Task1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\study\\2 курс\\1 семестр\\CS\\pr 2\\Task1\\Task1.csproj",
+        "projectUniqueName": "D:\\study\\2 курс\\1 семестр\\CS\\pr 2\\pr 2.2\\Task1\\Task1.csproj",
         "projectName": "Task1",
-        "projectPath": "D:\\study\\2 курс\\1 семестр\\CS\\pr 2\\Task1\\Task1.csproj",
+        "projectPath": "D:\\study\\2 курс\\1 семестр\\CS\\pr 2\\pr 2.2\\Task1\\Task1.csproj",
         "packagesPath": "C:\\Users\\typom\\.nuget\\packages\\",
-        "outputPath": "D:\\study\\2 курс\\1 семестр\\CS\\pr 2\\Task1\\obj\\",
+        "outputPath": "D:\\study\\2 курс\\1 семестр\\CS\\pr 2\\pr 2.2\\Task1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\typom\\AppData\\Roaming\\NuGet\\NuGet.Config"

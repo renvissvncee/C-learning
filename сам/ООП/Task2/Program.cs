@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class Car
+class Car
 {
     public string Model { get; set; }
     public static int TotalCars;
